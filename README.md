@@ -28,7 +28,7 @@ Our goals are to:
 - [ ] shadcn/ui for accessible and customizable UI components
 - [ ] Dev Containers for consistent development environments
 - [ ] Prisma with PostgreSQL for database management
-- [ ] Authentication system
+- [ ] Auth.js as authentication system
 - [ ] Containerized deployment
 - [ ] CI/CD workflows
 - [ ] Typed APIs
@@ -43,7 +43,7 @@ Our goals are to:
 - **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
 - **Database**: [PostgreSQL](https://www.postgresql.org/) (planned)
 - **ORM**: [Prisma](https://www.prisma.io/) (planned)
-- **Authentication**: To be decided
+- **Authentication**: [Auth.js](https://authjs.dev/) (planned)
 - **Deployment**: To be decided
 
 
@@ -90,6 +90,7 @@ This project is open source and available under the [MIT License](LICENSE).
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [shadcn/ui](https://ui.shadcn.com/)
+- [Auth.js](https://authjs.dev/)
 - All our amazing contributors and the open-source community
 
 ---
