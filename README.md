@@ -9,22 +9,23 @@
 # NextBest: A Next.js Best Practices Laboratory
 </div>
 
-Welcome to NextBest, a continuously evolving repository dedicated to showcasing best practices in modern web development using Next.js and its ecosystem.
+Welcome to NextBest, an evolving repository dedicated to exploring and discovering best practices in modern web development using Next.js and its ecosystem.
 
-## 🌟 Vision
+## 🧪 Vision
 
-NextBest aims to be a living, breathing example of excellence in web development. We're not just another boilerplate; we're a journey towards mastering the art of building robust, scalable, and maintainable web applications.
+NextBest is designed as a living laboratory for web development excellence. We're not claiming to have all the answers; instead, we're embarking on a journey of experimentation, learning, and continuous improvement in building robust, scalable, and maintainable web applications.
 
-Our goal is to:
-- Demonstrate best practices in action
-- Evolve with the rapidly changing tech landscape
-- Foster a community of passionate developers who strive for excellence
+Our goals are to:
+- Explore and test various approaches to common web development challenges
+- Adapt to the rapidly changing tech landscape through iterative improvements
+- Build a community of curious developers who are passionate about pushing the boundaries of what's possible
 
 ## 🚀 Features (Current & Planned)
 
 - [x] Next.js 14 with App Router
 - [x] TypeScript for type-safe code
 - [x] Tailwind CSS for styling
+- [ ] shadcn/ui for accessible and customizable UI components
 - [ ] Dev Containers for consistent development environments
 - [ ] Prisma with PostgreSQL for database management
 - [ ] Authentication system
@@ -39,6 +40,7 @@ Our goal is to:
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
 - **Database**: [PostgreSQL](https://www.postgresql.org/) (planned)
 - **ORM**: [Prisma](https://www.prisma.io/) (planned)
 - **Authentication**: To be decided
@@ -49,7 +51,7 @@ Our goal is to:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/nextbest.git
+   git clone https://github.com/rubenschwan/nextbest.git
    cd nextbest
    ```
 
@@ -67,7 +69,7 @@ Our goal is to:
 
 ## 🤝 Contributing
 
-We believe in the power of community-driven development. If you have suggestions, best practices, or improvements to share, please:
+We believe in the power of collaborative experimentation. If you have ideas, suggestions, or want to contribute to our ongoing experiments, please:
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
@@ -75,7 +77,7 @@ We believe in the power of community-driven development. If you have suggestions
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-All contributions, big or small, are warmly welcomed!
+All contributions, whether they're new experiments or improvements to existing ones, are warmly welcomed!
 
 ## 📜 License
 
@@ -87,6 +89,7 @@ This project is open source and available under the [MIT License](LICENSE).
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
 - All our amazing contributors and the open-source community
 
 ---
