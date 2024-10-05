@@ -72,9 +72,9 @@ Our goals are to:
 We believe in the power of collaborative experimentation. If you have ideas, suggestions, or want to contribute to our ongoing experiments, please:
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+2. Create your feature branch (`git checkout -b feat/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
+4. Push to the branch (`git push origin feat/AmazingFeature`)
 5. Open a Pull Request
 
 All contributions, whether they're new experiments or improvements to existing ones, are warmly welcomed!
