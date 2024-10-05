@@ -28,7 +28,7 @@ Our goals are to:
 - [ ] shadcn/ui for accessible and customizable UI components
 - [ ] Dev Containers for consistent development environments
 - [ ] Prisma with PostgreSQL for database management
-- [ ] Auth.js as authentication system
+- [ ] Auth.js for authentication
 - [ ] Containerized deployment
 - [ ] CI/CD workflows
 - [ ] Typed APIs
