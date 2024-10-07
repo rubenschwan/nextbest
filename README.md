@@ -25,8 +25,8 @@ Our goals are to:
 - [x] Next.js 14 with App Router
 - [x] TypeScript for type-safe code
 - [x] Tailwind CSS for styling
+- [x] Dev Containers for consistent development environments
 - [ ] shadcn/ui for accessible and customizable UI components
-- [ ] Dev Containers for consistent development environments
 - [ ] Prisma with PostgreSQL for database management
 - [ ] Auth.js for authentication
 - [ ] Containerized deployment
@@ -45,27 +45,55 @@ Our goals are to:
 - **ORM**: [Prisma](https://www.prisma.io/) (planned)
 - **Authentication**: [Auth.js](https://authjs.dev/) (planned)
 - **Deployment**: To be decided
-
+- **Development Environment**: [Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers)
 
 ## 🚦 Getting Started
+
+You can choose to develop using Dev Containers or without them. Dev Containers provide a consistent development environment across different machines.
+
+### Using Dev Containers (Recommended)
+
+1. Ensure you have [Docker](https://www.docker.com/products/docker-desktop) and [VS Code](https://code.visualstudio.com/) installed.
+2. Install the [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension in VS Code.
+3. Clone the repository:
+   ```bash
+   git clone https://github.com/rubenschwan/nextbest.git
+   ```
+4. Open the project in VS Code.
+5. When prompted, click "Reopen in Container" or run the "Remote-Containers: Reopen in Container" command from the command palette.
+6. VS Code will build the Dev Container and set up the environment. This may take a few minutes the first time.
+
+### Without Dev Containers
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/rubenschwan/nextbest.git
    cd nextbest
    ```
-
 2. Install dependencies:
    ```bash
    npm install
    ```
-
 3. Run the development server:
    ```bash
    npm run dev
    ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Development Setup
+
+This project uses VS Code for development. We recommend installing the following extensions for the best development experience:
+
+- ESLint
+- Prettier
+- Remote Development
+- Docker
+- Tailwind CSS IntelliSense
+
+When using Dev Containers, these extensions are automatically installed in the container environment.
+
+If you're not using Dev Containers, you'll be prompted to install recommended extensions when you open the project in VS Code. We highly recommend installing these extensions to enhance your development experience.
 
 ## 🤝 Contributing
 
@@ -91,6 +119,7 @@ This project is open source and available under the [MIT License](LICENSE).
 - [Tailwind CSS](https://tailwindcss.com/)
 - [shadcn/ui](https://ui.shadcn.com/)
 - [Auth.js](https://authjs.dev/)
+- [Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers)
 - All our amazing contributors and the open-source community
 
 ---
