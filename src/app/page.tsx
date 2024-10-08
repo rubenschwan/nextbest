@@ -15,6 +15,7 @@ import {
   Lock,
   MessageSquare,
   Palette,
+  Users,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -117,19 +118,17 @@ export default function HomePage() {
                 community.
               </p>
             </div>
-            <Card className="w-full max-w-md">
-              <CardHeader>
-                <CardTitle>Community Engagement</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Soon, you&apos;ll be able to log in and engage in discussions
-                  about implementing best practices. Share your insights, vote
-                  on approaches, and collaborate with fellow developers to
-                  refine and improve Next.js development techniques.
-                </CardDescription>
-              </CardContent>
-            </Card>
+            <div className="w-full">
+              <FeatureCard
+                icon={<Users className="h-10 w-10 mb-4 text-primary" />}
+                title="Community Engagement"
+                description="Soon, you'll be able to log in and engage in discussions
+              about implementing best practices. Share your insights, vote
+              on approaches, and collaborate with fellow developers to
+              refine and improve Next.js development techniques."
+                status="todo"
+              />
+            </div>
           </div>
         </div>
       </section>
