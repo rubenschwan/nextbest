@@ -26,8 +26,8 @@ Our goals are to:
 - [x] TypeScript for type-safe code
 - [x] Tailwind CSS for styling
 - [x] Dev Containers for consistent development environments
-- [ ] shadcn/ui for accessible and customizable UI components
-- [ ] Prisma with PostgreSQL for database management
+- [x] shadcn/ui for accessible and customizable UI components
+- [x] Prisma with PostgreSQL for database management
 - [ ] Auth.js for authentication
 - [ ] Containerized deployment
 - [ ] CI/CD workflows
@@ -41,8 +41,8 @@ Our goals are to:
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
-- **Database**: [PostgreSQL](https://www.postgresql.org/) (planned)
-- **ORM**: [Prisma](https://www.prisma.io/) (planned)
+- **Database**: [PostgreSQL](https://www.postgresql.org/)
+- **ORM**: [Prisma](https://www.prisma.io/)
 - **Authentication**: [Auth.js](https://authjs.dev/) (planned)
 - **Deployment**: To be decided
 - **Development Environment**: [Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers)
@@ -62,6 +62,12 @@ You can choose to develop using Dev Containers or without them. Dev Containers p
 4. Open the project in VS Code.
 5. When prompted, click "Reopen in Container" or run the "Remote-Containers: Reopen in Container" command from the command palette.
 6. VS Code will build the Dev Container and set up the environment. This may take a few minutes the first time.
+7. Once the container is ready, open a new terminal in VS Code and run:
+   ```bash
+   npm install
+   npx prisma migrate dev
+   ```
+   This will install dependencies, generate Prisma client, and run database migrations.
 
 ### Without Dev Containers
 
@@ -74,12 +80,18 @@ You can choose to develop using Dev Containers or without them. Dev Containers p
    ```bash
    npm install
    ```
-3. Run the development server:
+3. Set up your local PostgreSQL database and update the DATABASE_URL in the .env file.
+4. Run Prisma migrations:
+   ```bash
+   npx prisma generate
+   npx prisma migrate dev
+   ```
+5. Run the development server:
    ```bash
    npm run dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+6. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Development Setup
 
@@ -90,6 +102,7 @@ This project uses VS Code for development. We recommend installing the following
 - Remote Development
 - Docker
 - Tailwind CSS IntelliSense
+- Prisma
 
 When using Dev Containers, these extensions are automatically installed in the container environment.
 
@@ -120,6 +133,8 @@ This project is open source and available under the [MIT License](LICENSE).
 - [shadcn/ui](https://ui.shadcn.com/)
 - [Auth.js](https://authjs.dev/)
 - [Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers)
+- [Prisma](https://www.prisma.io/)
+- [PostgreSQL](https://www.postgresql.org/)
 - All our amazing contributors and the open-source community
 
 ---

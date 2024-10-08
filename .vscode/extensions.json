@@ -4,6 +4,7 @@
     "esbenp.prettier-vscode",
     "ms-vscode-remote.vscode-remote-extensionpack",
     "ms-azuretools.vscode-docker",
-    "bradlc.vscode-tailwindcss"
+    "bradlc.vscode-tailwindcss",
+    "prisma.prisma"
   ]
 }
