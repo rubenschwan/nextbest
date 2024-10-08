@@ -1,108 +1,201 @@
-import { ModeToggle } from "@/components/ModeToggle";
-import Image from "next/image";
+import { Logo } from "@/components/Logo";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Box,
+  Code,
+  Database,
+  Lock,
+  MessageSquare,
+  Palette,
+} from "lucide-react";
+import Link from "next/link";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <h1 className="text-2xl font-bold">NextBest</h1>
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="flex-1">
+      <section className="w-full py-12 md:py-24 lg:py-32">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="flex flex-col items-center space-y-4 text-center">
+            <Logo width={150} height={150} className="mb-8" />
+            <div className="space-y-2">
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+                NextBest
+              </h1>
+              <h2 className="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl lg:text-4xl/none">
+                A Next.js Best Practices Laboratory
+              </h2>
+              <p className="mx-auto max-w-[800px] text-muted-foreground md:text-xl">
+                Welcome to NextBest, an evolving repository dedicated to
+                exploring and discovering best practices in modern web
+                development using Next.js and its ecosystem.
+              </p>
+            </div>
+            <div className="space-x-4">
+              <Button asChild>
+                <Link href="#get-started">Get Started</Link>
+              </Button>
+              <Button asChild variant="outline">
+                <Link
+                  href="https://github.com/rubenschwan/nextbest"
+                  target="_blank"
+                >
+                  View on GitHub
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+      <section
+        id="features"
+        className="w-full py-12 md:py-24 lg:py-32 bg-muted"
+      >
+        <div className="container mx-auto px-4 md:px-8">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">
+            Features
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <FeatureCard
+              icon={<Database className="h-10 w-10 mb-4 text-primary" />}
+              title="Database Integration"
+              description="Seamless Prisma and PostgreSQL integration for efficient data management."
+              status="implemented"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <FeatureCard
+              icon={<Lock className="h-10 w-10 mb-4 text-primary" />}
+              title="Authentication"
+              description="Robust authentication system powered by Auth.js for secure user management."
+              status="todo"
+            />
+            <FeatureCard
+              icon={<Palette className="h-10 w-10 mb-4 text-primary" />}
+              title="UI Components"
+              description="Beautiful, responsive components using shadcn and Tailwind CSS."
+              status="implemented"
+            />
+            <FeatureCard
+              icon={<Box className="h-10 w-10 mb-4 text-primary" />}
+              title="Dev container mx-autos"
+              description="Consistent development environments with container mx-autoization support."
+              status="implemented"
+            />
+            <FeatureCard
+              icon={<Code className="h-10 w-10 mb-4 text-primary" />}
+              title="Typed APIs"
+              description="Strongly typed APIs for improved reliability and developer experience."
+              status="todo"
+            />
+            <FeatureCard
+              icon={<MessageSquare className="h-10 w-10 mb-4 text-primary" />}
+              title="Advanced Forms"
+              description="Powerful forms with built-in validation and error handling."
+              status="todo"
+            />
+          </div>
         </div>
+      </section>
 
-        <div className="flex justify-center w-full">
-          <ModeToggle />
+      <section id="future" className="w-full py-12 md:py-24 lg:py-32">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="flex flex-col items-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                Future Plans
+              </h2>
+              <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+                We&apos;re excited to announce upcoming features that will
+                enhance collaboration and knowledge sharing within the NextBest
+                community.
+              </p>
+            </div>
+            <Card className="w-full max-w-md">
+              <CardHeader>
+                <CardTitle>Community Engagement</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Soon, you&apos;ll be able to log in and engage in discussions
+                  about implementing best practices. Share your insights, vote
+                  on approaches, and collaborate with fellow developers to
+                  refine and improve Next.js development techniques.
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </div>
         </div>
-        
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      <section
+        id="get-started"
+        className="w-full py-12 md:py-24 lg:py-32 bg-muted"
+      >
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="flex flex-col items-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                Get Started with NextBest
+              </h2>
+              <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+                Ready to elevate your Next.js development? Clone the repository
+                and start exploring the best practices today!
+              </p>
+            </div>
+            <div className="w-full max-w-sm space-y-2">
+              <Button asChild className="w-full">
+                <Link
+                  href="https://github.com/rubenschwan/nextbest"
+                  target="_blank"
+                >
+                  Clone Repository
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
+
+interface FeatureCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  status: "implemented" | "todo";
+}
+
+function FeatureCard({ icon, title, description, status }: FeatureCardProps) {
+  return (
+    <Card
+      className={`flex flex-col h-full ${
+        status === "todo" ? "opacity-60" : ""
+      }`}
+    >
+      <CardHeader>
+        <CardTitle className="flex flex-col items-center">
+          {icon}
+          {title}
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="flex flex-col flex-grow">
+        <CardDescription className="text-center flex-grow">
+          {description}
+        </CardDescription>
+        <div className="mt-4 flex justify-center">
+          <Badge variant={status === "implemented" ? "default" : "secondary"}>
+            {status === "implemented" ? "Implemented" : "Coming Soon"}
+          </Badge>
+        </div>
+      </CardContent>
+    </Card>
   );
 }
