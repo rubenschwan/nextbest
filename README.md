@@ -83,7 +83,6 @@ You can choose to develop using Dev Containers or without them. Dev Containers p
 3. Set up your local PostgreSQL database and update the DATABASE_URL in the .env file.
 4. Run Prisma migrations:
    ```bash
-   npx prisma generate
    npx prisma migrate dev
    ```
 5. Run the development server:
